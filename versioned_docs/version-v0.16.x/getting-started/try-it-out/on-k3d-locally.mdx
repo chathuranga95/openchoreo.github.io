@@ -610,6 +610,7 @@ Execute the following command to install observability plane's system services
   --version ${versions.helmChart} \\
   --namespace openchoreo-observability-plane \\
   --values https://raw.githubusercontent.com/openchoreo/openchoreo/${versions.githubRef}/install/k3d/single-cluster/values-op.yaml \\
+  --set observer.extraEnv.AUTH_SERVER_BASE_URL=http://thunder-service.openchoreo-control-plane.svc.cluster.local:8090 \\
   --timeout 25m`}
 </CodeBlock>
 

@@ -846,6 +846,7 @@ Execute the following command to install observability plane's system services
   --set clusterAgent.tls.generateCerts=true \\
   --set observer.openSearchSecretName=observer-opensearch-credentials \\
   --set observer.controlPlaneApiUrl="http://openchoreo-api.openchoreo-control-plane.svc.cluster.local:8080" \\
+  --set observer.extraEnv.AUTH_SERVER_BASE_URL="https://thunder.\${CP_BASE_DOMAIN}" \\
   --set security.oidc.jwksUrl="https://thunder.\${CP_BASE_DOMAIN}/oauth2/jwks" \\
   --set security.oidc.tokenUrl="https://thunder.\${CP_BASE_DOMAIN}/oauth2/token" \\
   --set-string security.oidc.jwksUrlTlsInsecureSkipVerify=true \\
